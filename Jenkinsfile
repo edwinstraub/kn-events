@@ -9,8 +9,8 @@ pipeline {
   environment {
     CI = true
     ARTIFACTORY_ACCESS_TOKEN = credentials('artifactory-access-token')
-	ARTIFACTORY_URL = http://172.18.173.250/:8082/artifactory/
-	ARTIFACTORY_REPO_ID = test-app/
+	  ARTIFACTORY_URL = 'http://172.18.173.250/:8082/artifactory/'
+	  ARTIFACTORY_REPO_ID = 'test-app/'
   }
   stages {
     stage('Build') {
