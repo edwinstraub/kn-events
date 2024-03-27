@@ -21,7 +21,7 @@ pipeline {
         }
       }
       steps {
-        sh 'jfrog rt upload --url http://172.18.173.250/:8082/artifactory/ --access-token ${ARTIFACTORY_ACCESS_TOKEN} target/eventing-1.0.0-SNAPSHOT.jar java-web-app/'
+        sh 'jfrog rt upload --url http://172.18.173.250/:8082/artifactory/ --access-token ${ARTIFACTORY_ACCESS_TOKEN} target/eventing-1.0.0-SNAPSHOT.jar test-app/'
       }
     }
   }
