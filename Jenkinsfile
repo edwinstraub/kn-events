@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    jfrog 'jfrog-cli'
+    jfrog 'jfrog-cli-latest'
   }
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
