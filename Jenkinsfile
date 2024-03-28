@@ -18,7 +18,7 @@ pipeline {
   stages {
     stage('Upload Snapshot') {
       steps {
-	    sh 'mvn clean install -DskipTests deploy:deploy --batch-mode --settings maven_settings.xml -DaltDeploymentRepository="jfrog-artifactory::default::${ARTIFACTORY_URL}"'
+	    sh 'mvn clean install -DskipTests javadoc:jar source:jar-no-fork source:test-jar-no-fork deploy:deploy --batch-mode --settings maven_settings.xml -DaltDeploymentRepository="jfrog-artifactory::default::${ARTIFACTORY_URL}"'
       }
     }
   }
