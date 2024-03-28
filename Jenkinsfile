@@ -19,7 +19,6 @@ pipeline {
     stage('Upload Snapshot') {
       steps {
 	    echo "Credentials: ${ARTIFACTORY_CREDENTIALS}"
-		echo "Password: ${ARTIFACTORY_CREDENTIALS_PSW}"
 	    sh 'mvn clean install -DskipTests deploy:deploy --batch-mode --settings maven_settings.xml -DaltDeploymentRepository="jfrog-artifactory::default::${ARTIFACTORY_URL}"'
       }
     }

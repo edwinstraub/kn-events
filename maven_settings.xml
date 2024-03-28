@@ -4,8 +4,8 @@
 	<servers>
 		<server>
 		  <id>jfrog-artifactory</id>
-		  <username>${env.ARTIFACTORY_CREDENTIALS_USR}</username>
-		  <password>${env.ARTIFACTORY_CREDENTIALS_PSW}</password>
+		  <username>admin</username>
+		  <password>${ARTIFACTORY_CREDENTIALS}</password>
 		</server>
   </servers>
 </settings>
