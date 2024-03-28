@@ -12,7 +12,7 @@ pipeline {
   
   environment {
     ARTIFACTORY_CREDENTIALS = credentials('artifactory-access-token')
-	ARTIFACTORY_URL = 'http://172.18.173.250/:8082/artifactory/test-app/'
+	ARTIFACTORY_URL = 'http://172.18.173.250/:80/artifactory/test-app/'
   }
   
   stages {
