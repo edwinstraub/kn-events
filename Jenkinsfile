@@ -1,12 +1,9 @@
 pipeline {
-  agent {
-    label 'platform-node'
-  }
+  agent any
   
   options {
     buildDiscarder(logRotator(numToKeepStr: '5'))
     disableConcurrentBuilds()
-    timestamps()
   }
   
   tools {
